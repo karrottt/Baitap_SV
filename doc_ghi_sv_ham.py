@@ -4,7 +4,7 @@ import pickle
 
 def ghi_sinhvien(thumuc: str, ten_taptin: str, obj: SinhVien):
     try:
-        with open(os.path.join(thumuc, te   n_taptin), 'wb') as f:
+        with open(os.path.join(thumuc, ten_taptin), 'wb') as f:
             pickle.dump(obj, f)
         print('Hoan thanh qua trinh ghi du lieu vao tap tin')
     except Exception as e:
@@ -19,10 +19,7 @@ def doc_sinhvien(thumuc: str, ten_taptin: str):
         return None
 
 def main():
-    sv = [SinhVien('Huan Hoa Hoe', 2004, 10),
-          SinhVien('Ngo Ba Kha', 2004, 7),
-          SinhVien('Diep Lien Tu', 2004, 5),
-          SinhVien('Dat 1 Lit', 2004, 8)]
+    sv = [SinhVien('Huan Hoa Hoe', 2004, 10)]
     path = 'D:/data'
     filename = 'sinhvien2.dat'
     ghi_sinhvien(path, filename, sv)
